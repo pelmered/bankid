@@ -11,6 +11,8 @@ return [
         ],
     ],
 
+    'single_use_signature_tokens' => true,
+
     // Test logins for logging in without BankID.
     // For example if you make an app and want to Apple and Google to be able to test the app without BankID.
     'test_logins' => [

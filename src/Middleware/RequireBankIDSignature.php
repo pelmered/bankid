@@ -20,7 +20,7 @@ class RequireBankIDSignature
     {
         if (!isset($_SERVER['HTTP_BANKID_TOKEN'])) {
             return Response::json([
-                'error' => 'BankID auth token required'
+                'error' => 'BankID auth token required',
             ]);
         }
 
@@ -31,13 +31,19 @@ class RequireBankIDSignature
 
         if (!$token) {
             return Response::json([
-                'error' => 'Invalid BankID auth token'
+                'error' => 'Invalid BankID auth token',
             ]);
         }
 
         if ($token->expires_at < now()) {
             return Response::json([
-                'error' => 'This BankID token has expired'
+                'error' => 'This BankID token has expired',
+            ]);
+        }
+
+        if($token->used > 0 && config('bankid.single_use_signature_tokens')) {
+            return Response::json([
+                'error' => 'This BankID token has already been used',
             ]);
         }
 
