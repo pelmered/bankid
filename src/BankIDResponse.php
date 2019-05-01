@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\BankID;
+namespace LJSystem\BankID;
 
 use Illuminate\Http\JsonResponse;
 

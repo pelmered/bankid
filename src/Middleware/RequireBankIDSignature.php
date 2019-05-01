@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use Modules\BankID\BankidToken;
-use Modules\BankID;
+use LJSystem\BankID\BankidToken;
+use LJSystem\BankID;
 use Closure;
 use Response;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\BankID;
+namespace LJSystem\BankID;
 
 use App\Models\User;
 use App\Traits\BankIDSignable;
-use Modules\BankID\BankidToken;
+use LJSystem\BankID\BankidToken;
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Exception\RequestException;

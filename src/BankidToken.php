@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\BankID;
+namespace LJSystem\BankID;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * Modules\BankID\BankidToken
+ * LJSystem\BankID\BankidToken
  *
  * @property string $token
  * @property string $order_ref
@@ -24,22 +24,22 @@ use Illuminate\Support\Facades\Auth;
  * @property \Illuminate\Support\Carbon $expires_at
  * @property mixed $uuid
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $signable
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken query()
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereAction($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereExpiresAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereOrderRef($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereRevoked($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereSignableId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereSignableType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereSignedByName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereSignedByPnr($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereUsed($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\Modules\BankID\BankidToken whereUserUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereAction($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereExpiresAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereOrderRef($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereRevoked($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereSignableId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereSignableType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereSignedByName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereSignedByPnr($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereUsed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\LJSystem\BankID\BankidToken whereUserUuid($value)
  * @mixin \Eloquent
  */
 class BankidToken extends Model

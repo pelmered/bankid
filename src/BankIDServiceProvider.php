@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Modules\BankID;
+namespace LJSystem\BankID;
 
 use Illuminate\Support\ServiceProvider;
 
