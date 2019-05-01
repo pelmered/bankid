@@ -14,5 +14,12 @@
         "psr-4": {
             "LJSystem\\BankID\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LJSystem\\BankID\\BankIDServiceProvider"
+            ]
+        }
     }
 }
