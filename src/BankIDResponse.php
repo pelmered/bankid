@@ -1,6 +1,8 @@
 <?php
 
-namespace LJSystem\BankID;
+namespace Modules\BankID;
+
+use Illuminate\Http\JsonResponse;
 
 class BankIDResponse
 {
@@ -154,7 +156,7 @@ class BankIDResponse
      */
     public function getMessage()
     {
-        return $this->message;
+        return __($this->message);
     }
 
     /**
@@ -187,5 +189,21 @@ class BankIDResponse
     public function getPersonalNumber()
     {
         return $this->personalNumber;
+    }
+
+    public function toArray()
+    {
+        return [
+            'status'    => $this->getStatus(),
+            'orderRef'  => $this->getOrderRef(),
+            'message'   => $this->getMessage(),
+            'pnr'       => $this->getPersonalNumber(),
+            //'body'      => $this->getBody(),
+        ];
+    }
+
+    public function toJson(array $extra = [])
+    {
+        return new JsonResponse(array_merge($this->toArray(), $extra));
     }
 }
