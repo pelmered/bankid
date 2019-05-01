@@ -5,7 +5,7 @@ namespace LJSystem\BankID;
 
 use Illuminate\Support\ServiceProvider;
 
-class RiakServiceProvider extends ServiceProvider
+class BankIDServiceProvider extends ServiceProvider
 {
     /**
      * Register bindings in the container.
