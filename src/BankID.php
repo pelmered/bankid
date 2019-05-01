@@ -41,16 +41,19 @@ class BankID
      * @param string $certificate
      * @param string $rootCertificate
      */
-    public function __construct($environment = null)
+    public function __construct($environment = null, $certificate = null, $rootCertificate = null)
     {
         if (!$environment) {
             $environment = config('bankid.environment');
         }
 
         if ($environment === self::ENVIRONMENT_PRODUCTION) {
-            # set real prod certs. Now it's only a copy of test certs
-            $certificate     = storage_path('certificates/bankid/prod/prod.pem');
-            $rootCertificate = storage_path('certificates/bankid/prod/prod_cacert.pem');
+            if(!$certificate) {
+                $certificate = config('bankid.environments.'.BankID::ENVIRONMENT_PRODUCTION.'.certificate');
+            }
+            if (! $rootCertificate) {
+                $rootCertificate = config('bankid.environments.'.BankID::ENVIRONMENT_PRODUCTION.'.root_certificate');
+            }
         } else {
             $environment     = self::ENVIRONMENT_TEST;
             $certificate     = __DIR__.'/../certificates/test.pem';
