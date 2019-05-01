@@ -16,7 +16,7 @@ class CreateBankidTokens extends Migration
         Schema::create('bankid_tokens', function (Blueprint $table) {
             $table->string('token', 150)->primary();
             $table->string('order_ref', 100);
-            $table->uuid('user_uuid');
+            $table->unsignedInteger('user_id');
             $table->string('signed_by_name', 100);
             $table->string('signed_by_pnr', 20);
 
@@ -29,7 +29,7 @@ class CreateBankidTokens extends Migration
             $table->timestamps();
             $table->dateTime('expires_at');
 
-            $table->foreign('user_uuid')->references('uuid')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
