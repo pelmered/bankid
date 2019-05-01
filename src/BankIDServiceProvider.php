@@ -27,15 +27,15 @@ class BankIDServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/bankid.php' => config_path('bankid.php'),
+            __DIR__.'/../config/bankid.php' => config_path('bankid.php'),
         ]);
 
-        $this->loadMigrationsFrom(__DIR__.'/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../migrations');
 
-        $this->loadTranslationsFrom(__DIR__.'/lang', 'bankid');
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'bankid');
 
         $this->publishes([
-            __DIR__.'/lang' => resource_path('lang/vendor/bankid'),
+            __DIR__.'/../lang' => resource_path('lang/vendor/bankid'),
         ]);
     }
 }
